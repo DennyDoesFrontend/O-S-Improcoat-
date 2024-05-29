@@ -298,6 +298,11 @@ footer h3 {
   flex: 1;
 }
 
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+
 .copy {
   background-color: var(--text);
   color: white;
