@@ -58,10 +58,11 @@ nav .links li a {
   font-size: 2.2rem;
   text-align: center;
 }
+
 .hero-text p {
   text-align: center;
   font-size: 1.2rem;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
 }
 
 .hero .abs-container {
@@ -73,6 +74,7 @@ nav .links li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
   color: white;
 }
@@ -95,14 +97,27 @@ nav .links li a {
 }
 
 .product-info {
-  display: flex;
   align-items: center;
   gap: 50px;
   justify-content: center;
 }
 
-.product-info img {
-  max-width: 700px;
+@media screen and (min-width: 1335px) {
+  .product-info {
+    display: flex;
+  }
+  .product-info img {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  .product-info ul {
+    list-style-type: none;
+  }
+  .product-info img {
+    width: 100%;
+  }
 }
 
 .product-info .product-text {
@@ -134,8 +149,8 @@ nav .links li a {
   background-color: var(--text);
   min-height: 40vh;
   padding: 20px 150px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
 }
 
@@ -182,22 +197,20 @@ nav .links li a {
 }
 
 .cards {
-  display: flex;
-  align-items: start;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350, 1fr));
 }
 
 .card {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 25%;
   border-radius: 6px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .card img {
-  width: 100%;
+  max-width: 350px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
@@ -276,11 +289,10 @@ textarea {
 footer {
   background-color: var(--text);
   color: white;
-  display: flex;
-  gap: 30px;
-  padding: 50px 150px;
-  flex-wrap: wrap;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px 150px;
 }
 
 footer a {
@@ -307,4 +319,58 @@ footer h3 {
   background-color: var(--text);
   color: white;
   text-align: center;
+}
+
+@media screen and (max-width: 1355px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero .hero-text {
+    width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+    letter-spacing: none;
+  }
+  .abs-container p {
+    font-size: 1rem;
+  }
+  .product h2,
+  .whatwedo h2,
+  .contact h2,
+  .why-us h2 {
+    font-size: 1.5rem;
+  }
+  .product-text h3,
+  .more-info h3,
+  .card h3,
+  footer h3 {
+    font-size: 1rem;
+  }
+  .abs-container p,
+  .product-text p,
+  .hero-text p,
+  .contact p,
+  .card p,
+  .whatwedo-left p,
+  .more-info p {
+    font-size: 14px;
+  }
+  nav,
+  .copy {
+    display: none;
+  }
 }
