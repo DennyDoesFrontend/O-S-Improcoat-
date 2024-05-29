@@ -6,3 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     links.classList.toggle("active");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item h3");
+
+  faqItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const parent = item.parentElement;
+      parent.classList.toggle("active");
+    });
+  });
+});
