@@ -1,6 +1,6 @@
 @import url(./defaults.css);
 
-nav {
+/* nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +21,91 @@ nav .links li a {
   text-decoration: none;
   color: var(--text);
   font-size: 1.2rem;
+} */
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 150px;
+  background-color: var(--text);
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+ul.links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul.links li {
+  margin-left: 1rem;
+}
+
+ul.links li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+ul.links li a:hover {
+  background-color: #555;
+}
+
+/* Hamburger menu for mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  ul.links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #333;
+    z-index: 999;
+  }
+
+  ul.links li {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  ul.links.active {
+    display: flex;
+  }
 }
 
 /* hero section */
@@ -287,8 +372,7 @@ textarea {
 footer {
   background-color: var(--text);
   color: white;
-  /* display: grid; */
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: grid;
   gap: 20px;
   padding: 20px 150px;
 }
@@ -369,17 +453,22 @@ footer h3 {
   footer .logo-text p {
     font-size: 14px;
   }
-  nav,
-  .copy {
-    display: none;
-  }
   .card img {
-    max-width: 300px;
+    max-width: 320px;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  footer {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
