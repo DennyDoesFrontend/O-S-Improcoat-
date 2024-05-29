@@ -150,7 +150,6 @@ nav .links li a {
   min-height: 40vh;
   padding: 20px 150px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
 }
 
@@ -198,7 +197,6 @@ nav .links li a {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350, 1fr));
 }
 
 .card {
@@ -289,7 +287,7 @@ textarea {
 footer {
   background-color: var(--text);
   color: white;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   padding: 20px 150px;
@@ -349,7 +347,7 @@ footer h3 {
     font-size: 1rem;
   }
   .product h2,
-  .whatwedo h2,
+  .whatwedo-left h2,
   .contact h2,
   .why-us h2 {
     font-size: 1.5rem;
@@ -362,15 +360,26 @@ footer h3 {
   }
   .abs-container p,
   .product-text p,
+  .product-text ul,
   .hero-text p,
   .contact p,
   .card p,
   .whatwedo-left p,
-  .more-info p {
+  .more-info p,
+  footer .logo-text p {
     font-size: 14px;
   }
   nav,
   .copy {
     display: none;
+  }
+  .card img {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
