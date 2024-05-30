@@ -22,12 +22,12 @@ a {
 }
 
 .ylw-button {
-  padding: 15px 30px;
+  padding: 10px 15px;
   color: var(--text);
   background-color: var(--primary);
   border: var(--primary);
   border-radius: 6px;
-  font-size: 1.2rem;
+  font-size: 16px;
   cursor: pointer;
 }
 

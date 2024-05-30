@@ -7,8 +7,11 @@ body {
 }
 
 /* hero section */
-.hero {
-  padding: 0px 150px;
+.hero,
+.service-hero,
+.faq-hero,
+.contact-hero {
+  padding: 0px 500px;
   background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.8),
@@ -19,23 +22,37 @@ body {
   min-height: 70vh;
 }
 
+.service-hero,
+.faq-hero,
+.contact-hero {
+  display: grid;
+  place-items: center;
+}
+.service-hero .hero-text h1 {
+  color: var(--primary);
+}
+
+.service-hero .hero-text p {
+  color: white;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: space-between;
   position: relative;
-  margin-block-end: 100px;
+  margin-block-end: 50px;
 }
 
-.hero .hero-text {
+.hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
   color: white;
-  width: 70%;
+  width: 100%;
 }
 
 .hero-text h1 {
@@ -45,15 +62,12 @@ body {
 
 .hero-text p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 18px;
   /* letter-spacing: 3px; */
 }
 
 .hero .abs-container {
-  position: absolute;
-  bottom: 0;
   background-color: var(--text);
-  width: 100%;
   padding: 15px 0;
   display: flex;
   align-items: center;
@@ -61,10 +75,11 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   color: white;
+  width: 100%;
 }
 
 .abs-container p {
-  font-size: 1.5rem;
+  font-size: 16px;
 }
 
 /* product */
@@ -72,8 +87,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px 150px;
-  margin-block-end: 100px;
+  padding: 20px 500px;
+  margin-block-end: 40px;
 }
 
 .product h2 {
@@ -87,12 +102,18 @@ body {
   justify-content: center;
 }
 
-@media screen and (min-width: 1335px) {
+.product-description {
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
   .product-info {
     display: flex;
   }
   .product-info img {
-    max-width: 700px;
+    max-width: 400px;
   }
 }
 
@@ -119,24 +140,23 @@ body {
 }
 
 .product-text ul {
-  font-size: 1.2rem;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .product-text p {
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 
 /* whatwedo */
 .whatwedo {
-  background-color: var(--text);
   min-height: 40vh;
-  padding: 20px 150px;
+  padding: 20px 500px;
   display: grid;
   gap: 30px;
-  margin-block-end: 100px;
+  margin-block-end: 50px;
 }
 
 .whatwedo-left,
@@ -145,13 +165,13 @@ body {
 }
 
 .whatwedo-left h2 {
-  color: var(--primary);
+  color: var(--text);
   font-size: 1.8rem;
 }
 
 .whatwedo-left p {
-  color: white;
-  font-size: 1.2rem;
+  color: var(--text);
+  font-size: 16px;
 }
 
 .whatwedo-right {
@@ -161,20 +181,19 @@ body {
 }
 
 .whatwedo-right .info .more-info h3 {
-  color: var(--primary);
+  color: var(--text);
 }
 
 .whatwedo-right .info .more-info p {
-  color: white;
+  color: var(--text);
 }
 
 /* why us */
 .why-us {
-  padding: 20px 150px;
+  padding: 20px 500px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-block-end: 100px;
 }
 
 .why-us h2 {
@@ -183,34 +202,40 @@ body {
 }
 
 .cards {
-  display: grid;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 10px;
   border-radius: 6px;
+  flex: 1;
   /* padding: 10px; */
 }
 
 .card img {
-  max-width: 350px;
+  max-width: 300px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
 
 .card h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .card p {
-  font-size: 1.2rem;
+  font-size: 16px;
+  width: 90%;
 }
 
 /* contact */
 .contact {
-  padding: 50px 150px;
+  padding: 50px 500px;
 }
 
 .contact h2 {
@@ -239,8 +264,8 @@ form .top {
   width: 100%;
 }
 
-.firstname,
-.lastname,
+.fullname,
+.email,
 .subject,
 .message {
   display: flex;
@@ -275,8 +300,9 @@ footer {
   background-color: var(--text);
   color: white;
   display: grid;
+  place-items: center;
   gap: 20px;
-  padding: 20px 150px;
+  padding: 20px 300px;
 }
 
 footer a {
@@ -322,7 +348,7 @@ footer h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 50px 150px;
+  padding: 50px 500px;
 }
 
 .service {
@@ -345,7 +371,7 @@ footer h3 {
 .why-choose-us {
   background-color: var(--text);
   color: white;
-  padding: 50px 150px;
+  padding: 50px 500px;
   text-align: center;
 }
 
@@ -414,6 +440,7 @@ footer h3 {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  padding: 20px 500px;
 }
 
 .gallery-item {
@@ -423,14 +450,15 @@ footer h3 {
 
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images cover the area without distortion */
   display: block;
   border-radius: 8px;
 }
 
 /* FAQ Section */
 .faq {
-  padding: 50px 150px;
+  padding: 50px 500px;
 }
 
 .faq h2 {
@@ -534,7 +562,7 @@ footer h3 {
 
 /* Contact Details Section */
 .contact-details {
-  padding: 50px 150px;
+  padding: 50px 500px;
 }
 
 .contact-details h2 {
@@ -581,6 +609,38 @@ footer h3 {
   border: 0;
 }
 
+@media screen and (max-width: 1800px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .gallery-container {
+    padding: 20px 100px;
+  }
+}
+
 @media screen and (max-width: 1355px) {
   nav,
   .hero,
@@ -596,9 +656,81 @@ footer h3 {
   .contact-details,
   .faq,
   .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .gallery-container {
+    padding: 20px 100px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
   footer {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .hero,
+  .service-hero,
+  .contact-hero,
+  .faq-hero {
+    min-height: 40vh;
   }
 }
 
@@ -612,6 +744,9 @@ footer h3 {
   .hero-text p {
     font-size: 1rem;
     letter-spacing: none;
+  }
+  .product-description p {
+    font-size: 14px;
   }
   .abs-container p {
     font-size: 1rem;
@@ -644,12 +779,8 @@ footer h3 {
   }
   .card {
     margin-bottom: 15px;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    flex: 1;
+    align-items: center;
   }
 }
 
