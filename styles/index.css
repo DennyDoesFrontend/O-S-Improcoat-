@@ -68,12 +68,12 @@ body {
 
 .hero .abs-container {
   background-color: var(--text);
-  padding: 15px 0;
+  padding: 15px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   color: white;
   width: 100%;
 }
@@ -730,7 +730,7 @@ footer h3 {
   .service-hero,
   .contact-hero,
   .faq-hero {
-    min-height: 40vh;
+    min-height: 60vh;
   }
 }
 
@@ -749,7 +749,7 @@ footer h3 {
     font-size: 14px;
   }
   .abs-container p {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .product h2,
   .whatwedo-left h2,
