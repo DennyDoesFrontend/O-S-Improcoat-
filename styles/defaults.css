@@ -5,6 +5,11 @@
   --text: #252525;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 * {
   margin: 0;
   padding: 0;

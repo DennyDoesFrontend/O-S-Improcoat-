@@ -9,7 +9,9 @@
   <body>
     <!-- Navigation Bar -->
     <nav>
-      <div class="logo">LOGO HERE</div>
+      <div class="logo">
+        <img src="../assets/logo.svg" width="100" alt="" />
+      </div>
       <img
         src="../assets/menu.svg"
         alt="Menu"
@@ -42,24 +44,24 @@
         For more information on our products and how we can help you with your
         industrial protective coating needs
       </p>
-      <form action="#">
+      <form action="https://formspree.io/f/xqkrvznr" method="post">
         <div class="top">
           <div class="firstname">
             <label for="firstname">First Name</label>
-            <input type="text" />
+            <input type="text" id="firstname" name="firstname" required />
           </div>
           <div class="lastname">
             <label for="lastname">Last Name</label>
-            <input type="text" />
+            <input type="text" id="lastname" name="lastname" required />
           </div>
           <div class="subject">
             <label for="subject">Subject</label>
-            <input type="text" />
+            <input type="text" id="subject" name="subject" required />
           </div>
         </div>
         <div class="message">
           <label for="message"> Message</label>
-          <textarea></textarea>
+          <textarea id="message" name="message" required></textarea>
         </div>
         <button class="ylw-button">Contact Us</button>
       </form>
@@ -73,13 +75,19 @@
           <h3>Ghana</h3>
           <p>Phone: +233 24 429 5540</p>
           <p>Email: ghana@osimprocoat.com</p>
-          <p>Address: [Ghana Office Address]</p>
+          <p>Address: P.O Box CO5111</p>
+          <h4>Location:</h4>
+          <span>Tema Community 2 behind C2 Communication Center</span>
         </div>
         <div class="contact-location">
           <h3>Ivory Coast</h3>
           <p>Phone: +255 0707676392</p>
           <p>Email: ivorycoast@osimprocoat.com</p>
-          <p>Address: [Ivory Coast Office Address]</p>
+          <p>Address: 28 BP 283 Abidjan</p>
+          <h4>Location:</h4>
+          <span
+            >28 Cocody Riviera Palmeraie Bessikoi rond-point saint-viateur</span
+          >
         </div>
       </div>
     </section>
@@ -102,7 +110,7 @@
     <!-- Footer -->
     <footer>
       <div class="logo-text">
-        <div class="logo">LOGO HERE</div>
+        <div class="logo"><img src="../assets/logo.svg" width="100" /></div>
         <p>
           Our duty is to be the solution oriented to help stabilize and
           accomplish the specific needs of your project.
@@ -110,10 +118,10 @@
       </div>
       <div class="pages">
         <h3>Pages</h3>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact Us</a>
-        <a href="#">FAQs</a>
+        <a href="../index.html">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./faqs.html">FAQs</a>
       </div>
       <div class="contactus">
         <h3>Contact</h3>

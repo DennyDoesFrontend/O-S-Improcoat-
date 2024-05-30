@@ -3,8 +3,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 150px;
-  background-color: var(--text);
-  color: white;
+  background-color: white;
+  color: var(--text);
 }
 
 .logo {
@@ -24,7 +24,7 @@ ul.links li {
 
 ul.links li a {
   text-decoration: none;
-  color: white;
+  color: var(--text);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background 0.3s;
@@ -32,6 +32,7 @@ ul.links li a {
 
 ul.links li a:hover {
   background-color: #555;
+  color: white;
 }
 
 /* Hamburger menu for mobile */
@@ -44,7 +45,7 @@ ul.links li a:hover {
 .menu-toggle .bar {
   height: 3px;
   width: 25px;
-  background-color: white;
+  background-color: black;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -54,11 +55,11 @@ ul.links li a:hover {
   ul.links {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: #333;
+    background-color: white;
     z-index: 999;
   }
 
