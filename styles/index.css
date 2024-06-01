@@ -455,6 +455,10 @@ footer h3 {
   border-radius: 8px;
 }
 
+.gallery-item p {
+  max-width: 285px;
+}
+
 /* FAQ Section */
 .faq {
   padding: 50px 500px;
